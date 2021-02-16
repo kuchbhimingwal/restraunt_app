@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <!-- meta tag to make sure content is same width as device and not scalable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Project 02 Framework</title>
+    
+    <!-- link to css files -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- link to js dependencies -->
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- MENU -->
+    <main id="menu">
+        <header>FAMILY OF EATERIES</header>
+        <div id="backToLanding" class="menuBtn"><span>Select a New Restaurant</span></div>
+        <div id="contact" class="menuBtn"><span>Contact Family of Eateries</span></div>
+        <div id="about" class="menuBtn"><span>About Family of Eateries</span></div>
+    </main>
+    <!-- SPLASH SCREEN -->
+    <main id="splash">
+        <img src="images/app-logo.png" alt="Family of Eateries" />
+    </main>
+    <!-- LANDING SCREEN -->
+    <main id="landing">
+        <header>
+            <p>Our Restaurants</p>
+        </header>
+        <div id="logo1" class="landingLogos">
+            <img src="images/fv-logo.png" alt="five vines logo">
+        </div>
+        <div id="logo2" class="landingLogos">
+            <img src="images/ceviche-logo.png" alt="ceviche logo">
+        </div>
+        <div id="logo3" class="landingLogos" data-section=".reservations">
+            <img src="images/bistro-logo.png" alt="bitro logo">
+        </div>
+    </main>
+    <!-- RESTAURANT 1 -->
+    <main id="rest1" class="rest">
+        <!-- header -->
+        <header>    
+            <div id="rest-head-1">
+                <img  class="hamburger" src="images/close2hamburger.gif" alt="hamburger menu">
+            </div>
+            <div id="rest-head-2">
+                <h1>Five vines</h1>
+            </div>
+            <div id="rest-head-3">
+                <img src="images/profile.png" alt="profile">
+            </div>
+        </header>
+        <!-- home -->
+        <section class="home">
+            <div class="sectionContainer">
+                <div class="searchbar reveal">
+                </div>
+                <h1 class="hea reveal">About us <span style="color: #FFD700;">&#9733; &#9733; &#9733; &#9733;</span></h1>
+                <p class="para reveal">Lenore Skwanski, executive chef/co-owner of Five Vines in
+ Portland, Maine, really just sticks with the basics: the
+New England native and long-time farm-to-table advocate 
+believes that “memorable dining is less about the chef
+in the kitchen and much more about the fresh, seasonal
+ ingredients.” In Skwanski’s case, many of those
+ingredients come courtesy of the restaurant’s own Five Vines Farm, which inspires such seasonal dishes.
+Chef Skwanski travels regularly to Italy with members of his kitchen and front-of-house teams to meet with Italian
+artisanal cheese and cured meat producers, olive oil and 
+balsamic vinegar producers, and internationally
+acclaimed winemakers. These Italian "finds" quickly make their way onto the innovative menus at each of his
+restaurants, and add to what rates as a truly authentic Italian dining experience. </p>
+            </div>
+            
+            <div class="gift reveal">
+                <h1>Our Locations</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5242.084477957251!2d-78.88096544124585!3d43.88751540072744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51d013ca358ef%3A0x7e115fe00af7ce02!2sOshawa%20Centre!5e0!3m2!1sen!2sca!4v1610828801202!5m2!1sen!2sca" width="280" height="210" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p>You could get a discount of upto 50% on any of our Restraunt</p>
+                
+            </div>
+        </section>
+        <!-- specials -->
+        <section class="specials">
+            
+           <h1>NIGHT SPECIALS</h1>
+        
+            <div class="night-spe reveal" id="ns-f-1">
+                <h2>Chicken Breast Parmigiana</h2>
+            </div>
+            <div class="night-spe reveal" id="ns-f-2">
+                <h2>Chicken Breast Cognac</h2>
+            </div>
+            <div class="night-spe reveal" id="ns-f-3">
+                <h2>Lamb Shank Osso Buco</h2>
+            </div>
+            <div class="night-spe reveal" id="ns-f-4">
+                <h2>Prawns Arrabiata</h2>
+            </div>
+        
+        </section>
+        <!-- reservations -->
+        <section class="reservations">
+            <div id="dp-1">
+                <img src="images/dp.png" alt="dp logo">
+            </div>
+            
+            <form>
+                <h2 class="reveal">Fill out the form below</h2>
+                <p class="reveal">* reauired</p>
+                
+                <p class="reveal">
+                        <label for="name">Name <span>*</span></label> 
+                        <input type="text" id="name" placeholder="First and Last Name"/>
+                    </p>
+                    <p class="reveal">
+                        <label for="phone">Phone no. <span>*</span></label> 
+                        <input type="text" id="phone" placeholder="12234314124"/>
+                    </p>
+                    <p class="reveal">
+                        <label for="date">Date <span>*</span></label> 
+                        <input type="date" id="date" />
+                    </p>
+                    <p class="reveal">
+                        <label for="time">Time <span>*</span></label> 
+                        <select name="time">
+                            <option>Select a time...</option>
+                            <option value="6:00 pm">6:00 pm</option>
+                            <option value="6:30 pm">6:30 pm</option>
+                            <option value="7:00 pm">7:00 pm</option>
+                            <option value="7:30 pm">7:30 pm</option>
+                            <option value="8:00 pm">8:00 pm</option>
+                            <option value="8:30 pm">8:30 pm</option>
+                            <option value="9:00 pm">9:00 pm</option>
+                            <option value="9:30 pm">9:30 pm</option>
+                        </select>
+                    </p>
+                    <p class="reveal">
+                        <label for="guests">Number of guests <span>*</span></label> 
+                        <select name="guests">
+                            <option>Select the number of guests...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7+">7+</option>
+                        </select>
+                    </p>
+                
+                
+            
+            </form>
+            <button id="mybtn" class="reveal">Register</button>
+                
+                <div class="para2">
+                    <p id="pe"></p>
+                </div>
+        
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="nightspecial" data-section=".specials">
+                <img src="images/lunch.png">
+                <p>Night special</p>
+            </div>
+            <div class="home-btn" data-section=".home">
+                <img src="images/home-run.png">
+                <p>Home</p>
+            </div>
+            <div class="signup" data-section=".reservations">
+                <img src="images/up-arrow.png">
+                <p>Reservation</p>
+            </div>
+        </footer>
+    </main>
+    <!-- RESTAURANT 2 -->
+    <main id="rest2" class="rest">
+        <!-- header -->
+        <header>    
+            <div id="rest-head-1">
+                <img  class="hamburger" src="images/close2hamburger.gif" alt="hamburger menu">
+            </div>
+            <div id="rest-head-2">
+                <h1>Ceviche</h1>
+            </div>
+            <div id="rest-head-3">
+                <img src="images/profile.png" alt="profile">
+            </div>
+        </header>
+        <!-- home -->
+        <section class="home">
+            <div class="sectionContainer">
+                <div class="searchbar reveal">
+                </div>
+                <h1 class="hea reveal">About us <span style="color: #FFD700;">&#9733; &#9733; &#9733; &#9733;</span></h1>
+                <p class="para reveal">Restaurante Ceviche opened its doors in January 2006, and in 2010 won the second star in the Michelin Guide.
+Ceviche is much more than chef Muñoz Izquierdo’s gastronomic vision for Barcelona. It is a spiritual project with
+the very best team of professionals at its forefront that strives to delight its diners with every aroma and flavour.
+After a full renovation carried out recently, the new Ceviche Restaurant is surprisingly much more modern and
+with more spacious and bright look. The emphasis on light, 
+textures with dominance of oak and selection of
+furnishings have been the mainstay of the entire project to give the restaurant a unique personality.
+The restaurant has a semi-private room in the main dining room and a second private dining room, called the
+Chef's Table for up to 8 people - located in a loft over the kitchen with glass wall that allows our guest to follow
+on all staging and creativity of the dishes. </p>
+            </div>
+            
+            <div class="gift">
+                <h1>Our Locations</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5242.084477957251!2d-78.88096544124585!3d43.88751540072744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51d013ca358ef%3A0x7e115fe00af7ce02!2sOshawa%20Centre!5e0!3m2!1sen!2sca!4v1610828801202!5m2!1sen!2sca" width="280" height="210" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p>You could get a discount of upto 50% on any of our Restraunt</p>
+                
+            </div>
+        </section>
+        <!-- specials -->
+        <section class="specials">
+            
+           <h1>NIGHT SPECIALS</h1>
+        
+            <div class="night-spe" id="ns-f-5">
+                <h2>Chicken Breast Parmigiana</h2>
+            </div>
+            <div class="night-spe" id="ns-f-6">
+                <h2>Chicken Breast Cognac</h2>
+            </div>
+            <div class="night-spe" id="ns-f-7">
+                <h2>Lamb Shank Osso Buco</h2>
+            </div>
+            <div class="night-spe" id="ns-f-8">
+                <h2>Prawns Arrabiata</h2>
+            </div>
+            <div class="night-spe" id="ns-f-9">
+                <h2>Prawns Arrabiata</h2>
+            </div>
+        
+        </section>
+        <!-- reservations -->
+        <section class="reservations">
+            <div id="dp-1">
+                <img src="images/dp.png" alt="dp logo">
+            </div>
+            
+            <form>
+                <h2 class="reveal">Fill out the form below</h2>
+                <p class="reveal">* reauired</p>
+                
+                <p class="reveal">
+                        <label for="name">Name <span>*</span></label> 
+                        <input type="text" name="name" placeholder="First and Last Name"/>
+                    </p>
+                    <p class="reveal">
+                        <label for="phone">Phone no. <span>*</span></label> 
+                        <input type="text" name="phone" placeholder="12234314124"/>
+                    </p>
+                    <p class="reveal">
+                        <label for="date">Date <span>*</span></label> 
+                        <input type="date" name="date" />
+                    </p>
+                    <p class="reveal">
+                        <label for="time">Time <span>*</span></label> 
+                        <select name="time">
+                            <option>Select a time...</option>
+                            <option value="6:00 pm">6:00 pm</option>
+                            <option value="6:30 pm">6:30 pm</option>
+                            <option value="7:00 pm">7:00 pm</option>
+                            <option value="7:30 pm">7:30 pm</option>
+                            <option value="8:00 pm">8:00 pm</option>
+                            <option value="8:30 pm">8:30 pm</option>
+                            <option value="9:00 pm">9:00 pm</option>
+                            <option value="9:30 pm">9:30 pm</option>
+                        </select>
+                    </p>
+                    <p class="reveal">
+                        <label for="guests">Number of guests <span>*</span></label> 
+                        <select name="guests">
+                            <option>Select the number of guests...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7+">7+</option>
+                        </select>
+                    </p>
+                
+            
+            </form>
+            <button id="mybtn" class="reveal">Register</button>
+                
+                <div class="para2">
+                    <p id="pe"></p>
+                </div>
+        
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="nightspecial" data-section=".specials">
+                <img src="images/lunch.png">
+                <p>Night special</p>
+            </div>
+            <div class="home-btn" data-section=".home">
+                <img src="images/home-run.png">
+                <p>Home</p>
+            </div>
+            <div class="signup" data-section=".reservations">
+                <img src="images/up-arrow.png">
+                <p>Reservation</p>
+            </div>
+        </footer>
+    </main>
+    <!-- RESTAURANT 3 -->
+    <main id="rest3" class="rest">
+        <!-- header -->
+        <header>    
+            <div id="rest-head-1">
+                <img  class="hamburger" src="images/close2hamburger.gif" alt="hamburger menu">
+            </div>
+            <div id="rest-head-2">
+                <h1>Bistro</h1>
+            </div>
+            <div id="rest-head-3">
+                <img src="images/profile.png" alt="profile">
+            </div>
+        </header>
+        <!-- home -->
+        <section class="home">
+            <div class="sectionContainer">
+                <div class="searchbar reveal">
+                </div>
+                <h1 class="hea reveal">About us <span style="color: #FFD700;">&#9733; &#9733; &#9733; &#9733; &#9733;</span></h1>
+                <p class="para reveal">We are a symbol of warmth and welcome. We are a simple 
+pleasure, honest and genuine. We are a life story told
+over dinner. We are a long lunch with an old friend. We are your weekday morning ritual. We are the kindest
+gesture of neighbours. We are home. We are family. We are friends.
+The best sandwiches start with great bread, freshly baked each day in our bakery-cafes. Crafted with our fresh,
+high-quality meats, cheeses and vegetables, there’s a whole host of inspired sandwich and panini options for
+you to enjoy. From classic favourites to inspired tastes, our variety of hot soups and mac & cheese feature highquality
+ ingredients and deliciously satisfying flavour by the spoonful. Hand-tossed and made to order, our salads
+use only the freshest ingredients — like vine-ripened tomatoes and crisp field greens — to create flavour
+combinations as unique as they are delicious.  </p>
+            </div>
+            
+            <div class="gift">
+                <h1>Our Locations</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5242.084477957251!2d-78.88096544124585!3d43.88751540072744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51d013ca358ef%3A0x7e115fe00af7ce02!2sOshawa%20Centre!5e0!3m2!1sen!2sca!4v1610828801202!5m2!1sen!2sca" width="280" height="210" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p>You could get a discount of upto 50% on any of our Restraunt</p>
+                
+            </div>
+        </section>
+        <!-- specials -->
+        <section class="specials">
+            
+           <h1>NIGHT SPECIALS</h1>
+        
+            <div class="night-spe" id="ns-f-10">
+                <h2>Chicken Breast Parmigiana</h2>
+            </div>
+            <div class="night-spe" id="ns-f-11">
+                <h2>Chicken Breast Cognac</h2>
+            </div>
+            <div class="night-spe" id="ns-f-12">
+                <h2>Lamb Shank Osso Buco</h2>
+            </div>
+            <div class="night-spe" id="ns-f-13">
+                <h2>Prawns Arrabiata</h2>
+            </div>
+        
+        </section>
+        <!-- reservations -->
+        <section class="reservations">
+            <div id="dp-1">
+                <img src="images/dp.png" alt="dp logo">
+            </div>
+            
+            <form>
+                <h2 class="reveal">Fill out the form below</h2>
+                <p class="reveal">* reauired</p>
+                
+                <p class="reveal">
+                        <label for="name">Name <span>*</span></label> 
+                        <input type="text" name="name" placeholder="First and Last Name"/>
+                    </p>
+                    <p class="reveal">
+                        <label for="phone">Phone no. <span>*</span></label> 
+                        <input type="text" name="phone" placeholder="12234314124"/>
+                    </p>
+                    <p class="reveal">
+                        <label for="date">Date <span>*</span></label> 
+                        <input type="date" name="date" />
+                    </p>
+                    <p class="reveal">
+                        <label for="time">Time <span>*</span></label> 
+                        <select name="time">
+                            <option>Select a time...</option>
+                            <option value="6:00 pm">6:00 pm</option>
+                            <option value="6:30 pm">6:30 pm</option>
+                            <option value="7:00 pm">7:00 pm</option>
+                            <option value="7:30 pm">7:30 pm</option>
+                            <option value="8:00 pm">8:00 pm</option>
+                            <option value="8:30 pm">8:30 pm</option>
+                            <option value="9:00 pm">9:00 pm</option>
+                            <option value="9:30 pm">9:30 pm</option>
+                        </select>
+                    </p>
+                    <p class="reveal">
+                        <label for="guests">Number of guests <span>*</span></label> 
+                        <select name="guests">
+                            <option>Select the number of guests...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7+">7+</option>
+                        </select>
+                    </p>
+                
+            
+            </form>
+            <button id="mybtn" class="reveal">Register</button>
+                
+                <div class="para2">
+                    <p id="pe"></p>
+                </div>
+        
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="nightspecial" data-section=".specials">
+                <img src="images/lunch.png">
+                <p>Night special</p>
+            </div>
+            <div class="home-btn" data-section=".home">
+                <img src="images/home-run.png">
+                <p>Home</p>
+            </div>
+            <div class="signup" data-section=".reservations">
+                <img src="images/up-arrow.png">
+                <p>Reservation</p>
+            </div>
+        </footer>
+    </main>
+    <!-- link to main js file -->
+ <script src="js/main.js"></script>
+</body>
+
+</html>
